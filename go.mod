@@ -1,3 +1,3 @@
-module github.com/PepperDash-Products/device-management-golang-common
+module github.com/pepperdash-products/device-management-golang-common
 
 go 1.15
