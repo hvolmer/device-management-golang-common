@@ -1,4 +1,4 @@
-package propchange
+package devicechange
 
 import "time"
 
