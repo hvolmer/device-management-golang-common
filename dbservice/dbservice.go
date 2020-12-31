@@ -14,6 +14,9 @@ import (
 // DBClient ...
 var dBClient mongo.Client
 
+// Database is the devices database
+var Database *mongo.Database
+
 // AlertMessagesColl The created alerts
 var AlertMessagesColl *mongo.Collection
 
@@ -22,6 +25,9 @@ var AlertTemplatesColl *mongo.Collection
 
 // DevicesColl The devices collection
 var DevicesColl *mongo.Collection
+
+// DeviceChangesColl ...
+var DeviceChangesColl *mongo.Collection
 
 // PropertyDefinitionsColl The property-definitions collection
 var PropertyDefinitionsColl *mongo.Collection
@@ -47,9 +53,10 @@ func Start() {
 
 	}
 	fmt.Println("DB CONNECTED")
-	database := dBClient.Database("devices")
-	AlertMessagesColl = database.Collection("alertmessages")
-	AlertTemplatesColl = database.Collection("alerttemplates")
-	DevicesColl = database.Collection("devices")
-	DeviceTypesColl = database.Collection("devicetypes")
+	Database = dBClient.Database("devices")
+	AlertMessagesColl = Database.Collection("alertmessages")
+	AlertTemplatesColl = Database.Collection("alerttemplates")
+	DevicesColl = Database.Collection("devices")
+	DeviceChangesColl = Database.Collection("devicechanges")
+	DeviceTypesColl = Database.Collection("devicetypes")
 }
