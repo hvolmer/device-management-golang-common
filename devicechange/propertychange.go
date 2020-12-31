@@ -10,11 +10,11 @@ import (
 
 // PropertyChangeMessage ...
 type PropertyChangeMessage struct {
-	Changes         []PropertyChange `json:"changes"`
-	CompanyUUID     string           `json:"companyUuid"`
-	ComplianceItems []device.ComplianceItem
-	DeviceID        primitive.ObjectID `json:"deviceId"`
-	Time            time.Time          `json:"time"`
+	Changes         []PropertyChange        `json:"changes"`
+	CompanyUUID     string                  `json:"companyUuid"`
+	ComplianceItems []device.ComplianceItem `json:"complianceItems"`
+	DeviceID        primitive.ObjectID      `json:"deviceId"`
+	Time            time.Time               `json:"time"`
 }
 
 // PropertyChange ...
