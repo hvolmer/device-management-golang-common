@@ -1,13 +1,17 @@
 package devicechange
 
-import "time"
+import (
+	"time"
+
+	"go.mongodb.org/mongo-driver/bson/primitive"
+)
 
 // PropertyChangeMessage ...
 type PropertyChangeMessage struct {
-	Changes     []PropertyChange `json:"changes"`
-	CompanyUUID string           `json:"companyUuid"`
-	DeviceID    string           `json:"deviceId"`
-	Time        time.Time        `json:"time"`
+	Changes     []PropertyChange   `json:"changes"`
+	CompanyUUID string             `json:"companyUuid"`
+	DeviceID    primitive.ObjectID `json:"deviceId"`
+	Time        time.Time          `json:"time"`
 }
 
 // PropertyChange ...
