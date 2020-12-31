@@ -2,6 +2,7 @@ package devicechange
 
 // DeviceChange represents the database type for change logging.
 type DeviceChange struct {
+	ID          string      `json:"_id" bson:"_id"`
 	Comment     string      `json:"comment,omitempty" bson:"comment,omitempty"`
 	CompanyUUID string      `json:"companyUuid" bson:"companyUuid"`
 	Compliance  string      `json:"compliance,omitempty" bson:"compliance,omitempty"`
