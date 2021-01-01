@@ -9,7 +9,7 @@ import (
 )
 
 // GetComplianceForChange ...
-func (dev device.Device) GetComplianceForChange(ch devicechange.DeviceChange) string {
+func GetComplianceForChange(ch devicechange.DeviceChange, dev device.Device) string {
 	for _, ci := range dev.ComplianceItems {
 		if ci.Path == ch.Path {
 			schemaLoader := gojsonschema.NewGoLoader(ci.Schema)
