@@ -20,10 +20,10 @@ func GetComplianceForChange(ch devicechange.DeviceChange, compItems *[]device.Co
 			}
 			if result.Valid() {
 				log.Println("COMPLIANCE ES BUENO")
-				return "false"
+				return "true"
 			}
 			log.Println("COMPLIANCE RESULT:", result.Errors())
-			return "true"
+			return "false"
 		}
 	}
 	return ""
