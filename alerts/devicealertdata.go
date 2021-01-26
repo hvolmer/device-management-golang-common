@@ -2,6 +2,7 @@ package alerts
 
 // DeviceAlertData represents the device data in alert emails
 type DeviceAlertData struct {
-	DeviceID   string
+	ID         string
+	Name       string
 	Properties []PropertyAlertData
 }

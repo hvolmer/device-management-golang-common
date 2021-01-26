@@ -4,6 +4,8 @@ package alerts
 // alert messages
 type SystemAlertData struct {
 	CompanyUUID string
+	CompanyName string
 	SystemUUID  string
+	SystemName  string
 	Devices     []DeviceAlertData
 }
