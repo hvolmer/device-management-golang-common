@@ -8,6 +8,7 @@ import (
 // type, not just an ID
 type Device struct {
 	ID              primitive.ObjectID `json:"_id" bson:"_id"`
+	ChangeItems     []ChangeItem       `json:"changeItems" bson:"changeItems"`
 	CompanyUUID     string             `json:"companyUuid" bson:"companyUuid"`
 	ComplianceItems []ComplianceItem   `json:"complianceItems" bson:"complianceItems"`
 	Connectivity    Connectivity       `bson:"connectivity" bson:"connectivity"`
