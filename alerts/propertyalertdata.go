@@ -1,6 +1,10 @@
 package alerts
 
-import "github.com/hvolmer/device-management-golang-common/devicechange"
+import (
+	"time"
+
+	"github.com/hvolmer/device-management-golang-common/devicechange"
+)
 
 // PropertyAlertData ...
 type PropertyAlertData struct {
@@ -12,4 +16,7 @@ type PropertyAlertData struct {
 	UserChange     devicechange.MinimizedDeviceChange
 	UserChangeName string
 	PreviousChange devicechange.MinimizedDeviceChange
+	Priority       int
+	Timeout        time.Time
+	AlertedTime    time.Time
 }
