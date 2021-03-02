@@ -8,9 +8,10 @@ import (
 
 // PropertyAlertData ...
 type PropertyAlertData struct {
-	Path           string
-	NameWithGroup  string
-	Label          string
+	Path          string
+	NameWithGroup string
+	Label         string
+	// Last State one of fault, recovery, schema-fault, schema-recovery
 	LastState      string
 	CurrentChange  devicechange.MinimizedDeviceChange
 	UserChange     devicechange.MinimizedDeviceChange
