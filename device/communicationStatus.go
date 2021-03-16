@@ -7,6 +7,7 @@ import "time"
 type CommunicationStatus struct {
 	CanPing      bool
 	CanPoll      bool
+	OfflineTime  time.Time
 	PingDisabled bool
 	PollDisabled bool
 	Time         time.Time
