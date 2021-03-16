@@ -13,6 +13,8 @@ type CommunicationStatus struct {
 	Time         time.Time
 }
 
+// IsOnline checks the various states and disables to calculate whether
+// this is considered online
 func (cs CommunicationStatus) IsOnline() bool {
 	if !cs.PollDisabled {
 		return cs.CanPoll
