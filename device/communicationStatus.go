@@ -13,7 +13,7 @@ type CommunicationStatus struct {
 	Time         time.Time
 }
 
-func (cs *CommunicationStatus) IsOnline() bool {
+func (cs CommunicationStatus) IsOnline() bool {
 	if !cs.PollDisabled {
 		return cs.CanPoll
 	}
